@@ -6,9 +6,9 @@ function consultaFake () {
     const url = formataURL(pergunta);
     console.log(url);
     
-/*  const paginas = searchGoogle(pergunta);
-    console.log(paginas); */
- 
+    const paginas = searchGoogle(pergunta);
+    console.log(paginas);
+ /*
     fetch(url)
   
     // fetch() returns a promise. When we have received a response from the server,
@@ -29,7 +29,8 @@ function consultaFake () {
   // Catch any errors that might happen, and display a message
   // in the `poemDisplay` box.
   .catch((error) => console.erro(`Could not fetch verse: ${error}`));
-  
+*/
+    
   if (isFake(paginaHTML) == 2) {
     console.log(paginaHTML);
     respostaFake(fake);
