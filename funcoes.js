@@ -47,7 +47,6 @@ function isFake(paginaHTML) {
     return 2;
 }
     
-
 /* Função formataURL cria a URL a partir da questão proposta e usando a busca do Google
    Os espaços da sentaça são substituidos por + e 
 */
