@@ -78,7 +78,6 @@
         }
 
         function handleSuccess(shweb) {
-            var falseHit = 0;
             var textoHTML = '';
             console.log("SUCESS", shweb)
 
@@ -110,11 +109,18 @@
             let result = document.querySelector("#result");
             var textoPagina = JSON.stringify(final);
 */
-            falseHit = countFalse(textoHTML);
-            if (falseHit > 10) {
-                window.location.href = "falso.html";
-            } else {
-                window.location.href = "verdade.html";
+
+            const falseHit = (textoHTML.match(/Falso/g) || []).length;
+            const verdadeHit = (textoHTML.match(/Verdade/g) || []).length;
+            var diferenca = Math.abs(falseHit - verdadeHit);
+            if diferenca > 5 {
+                if (falseHit > verdadeHit) {
+                    window.location.href = "falso.html";
+                } else {
+                    window.location.href = "verdade.html";
+                }
+            else {
+                window.location.href = "duvida.html";
             }
             console.log(falseHit);
         }
