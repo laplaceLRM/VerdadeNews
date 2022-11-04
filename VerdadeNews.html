@@ -78,12 +78,14 @@
 
         function handleSuccess(shweb) {
             var falseHit = 0;
+            var textoHTML = '';
             console.log("SUCESS", shweb)
 
             let googleResponse = document.querySelector("#google-response");
-            googleResponse.textContent = shweb;
+            textoHTML = "" + shweb;
+            console.log(textoHTML);
             
-            // Seta A Variavel Que Contem o HTML Da Pagina
+/*            // Seta A Variavel Que Contem o HTML Da Pagina
             var shhtm = new DOMParser().parseFromString(shweb, "text/html");
             
             // Seta A Variavel Shres Com a Class 'LC20lb DKV0Md'
@@ -103,6 +105,7 @@
                     desc: child ? child.innerText : "N/A",
                 }
             }
+*/ 
             // Retorna O Valor Final
             let result = document.querySelector("#result");
             var textoPagina = JSON.stringify(final);
