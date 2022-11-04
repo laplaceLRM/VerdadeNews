@@ -139,7 +139,7 @@
                 e.preventDefault();
                 doCORSRequest({
                     method: 'GET',
-                    url: "https://www.google.com/search?q=" + urlField.value,
+                    url: "https://www.google.com/search?q=" + urlField.value.replace(/ /g, '+'),
                 }, handleSuccess);
             };
         })();
