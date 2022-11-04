@@ -149,6 +149,8 @@
         (function () {
             var urlField = document.getElementById('fake');
             const uri = urlField.value;
+            console.log(uri);
+            
             document.getElementById('get').onclick = function (e) {
                 e.preventDefault();
                 doCORSRequest({
