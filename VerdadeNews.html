@@ -135,11 +135,12 @@
         // Bind event
         (function () {
             var urlField = document.getElementById('fake');
+            const uri = urlField.value;
             document.getElementById('get').onclick = function (e) {
                 e.preventDefault();
                 doCORSRequest({
                     method: 'GET',
-                    url: "https://www.google.com/search?q=" + urlField.value.replace(/ /g, '+'),
+                    url: "https://www.google.com/search?q=" + uri.replace(/ /g, '+'),
                 }, handleSuccess);
             };
         })();
