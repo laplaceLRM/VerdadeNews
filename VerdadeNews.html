@@ -78,7 +78,7 @@
 
         function handleSuccess(shweb) {
             var textoPagina = '';
-            var
+            var falseHit = 0;
             console.log("SUCESS", shweb)
 
             let googleResponse = document.querySelector("#google-response")
@@ -107,7 +107,8 @@
             let result = document.querySelector("#result");
             
             textoPagina = JSON.stringify(final);
-            result.content = countFalse(textoPagina);      
+            falseHit = countFalse(textoPagina);
+            console.log(falseHit);
         }
         
         function countFalse(pagina) {
