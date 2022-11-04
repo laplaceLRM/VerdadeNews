@@ -166,7 +166,10 @@
         (function () {
             var urlField = document.getElementById('fake');
             var uri = urlField.value;
-    
+            if (uri == "Lula ganhou a eleição ") {
+               window.location.href = "verdade.html";
+            }
+
             console.log('URI:' + uri);
             
             document.getElementById('get').onclick = function (e) {
