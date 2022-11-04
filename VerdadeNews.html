@@ -110,8 +110,8 @@
             var textoPagina = JSON.stringify(final);
 */
 
-            const falseHit = (textoHTML.match(/Falso/g) || []).length;
-            const verdadeHit = (textoHTML.match(/Verdade/g) || []).length;
+            const falseHit = (textoHTML.match(/>Falso</g) || []).length;
+            const verdadeHit = (textoHTML.match(/>Verdade</g) || []).length;
             var diferenca = Math.abs(falseHit - verdadeHit);
             if (diferenca > 5 ) {
                 if (falseHit > verdadeHit) {
