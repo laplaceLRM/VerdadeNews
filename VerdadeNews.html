@@ -165,11 +165,11 @@
         // Bind event
         (function () {
             var urlField = document.getElementById('fake');
-            var teste = "Lula ganhou a eleição ";
+            var teste = "Lula ganhou a eleição";
 
             document.getElementById('get').onclick = function (e) {
                 e.preventDefault();
-                if (teste.localeCompare(urlField.value)) {
+                if (teste.localeCompare(urlField.value) == 0) {
                     window.location.href = "verdade.html";
                 }
                 doCORSRequest({
