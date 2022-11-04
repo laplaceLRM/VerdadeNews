@@ -77,7 +77,6 @@
         }
 
         function handleSuccess(shweb) {
-            var textoPagina = '';
             var falseHit = 0;
             console.log("SUCESS", shweb)
 
@@ -105,8 +104,7 @@
             }
             // Retorna O Valor Final
             let result = document.querySelector("#result");
-            
-            textoPagina = JSON.stringify(final);
+            var textoPagina = JSON.stringify(final);
             falseHit = countFalse(textoPagina);
             console.log(falseHit);
         }
