@@ -77,6 +77,7 @@
         }
 
         function handleSuccess(shweb) {
+            var textoPagina = '';
             console.log("SUCESS", shweb)
 
             let googleResponse = document.querySelector("#google-response")
@@ -101,7 +102,19 @@
             }
             // Retorna O Valor Final
             let result = document.querySelector("#result")
-            result.textContent = JSON.stringify(final);
+            
+            textoPagina = JSON.stringify(final);
+            result.content = countFalse(textoPagina);
+            
+        }
+        
+        function countFalse(pagina) {
+            
+            const str = pagina;
+            const TermoFalse = "False";
+            const ocorrencias = (str.match(/texto/g) || []).length;
+
+            return ocorrencias;
         }
 
         function searchGoogle(Query) {
