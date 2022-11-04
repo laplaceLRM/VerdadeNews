@@ -78,6 +78,7 @@
 
         function handleSuccess(shweb) {
             var textoPagina = '';
+            var
             console.log("SUCESS", shweb)
 
             let googleResponse = document.querySelector("#google-response")
@@ -106,16 +107,15 @@
             let result = document.querySelector("#result");
             
             textoPagina = JSON.stringify(final);
-            result.content = countFalse(textoPagina);
-            
+            result.content = countFalse(textoPagina);      
         }
         
         function countFalse(pagina) {
             
             const str = pagina;
             const TermoFalse = "False";
-            const ocorrencias = (str.match(/texto/g) || []).length;
-
+            const ocorrencias = (str.match(/${TermoFalse}/g) || []).length;
+            console.log(ocorrencias);
             return ocorrencias;
         }
 
