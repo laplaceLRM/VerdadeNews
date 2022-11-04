@@ -81,9 +81,11 @@
             console.log("SUCESS", shweb)
 
             let googleResponse = document.querySelector("#google-response")
-            googleResponse.textContent = shweb
+            googleResponse.textContent = shweb;
+            
             // Seta A Variavel Que Contem o HTML Da Pagina
             var shhtm = new DOMParser().parseFromString(shweb, "text/html");
+            
             // Seta A Variavel Shres Com a Class 'LC20lb DKV0Md'
             shres = shhtm.getElementsByClassName('LC20lb DKV0Md')
             var final = []
@@ -150,7 +152,7 @@
             var urlField = document.getElementById('fake');
             var uri = urlField.value;
                         
-            console.log(uri);
+            console.log('URI:' + uri);
             
             document.getElementById('get').onclick = function (e) {
                 e.preventDefault();
