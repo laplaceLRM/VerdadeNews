@@ -149,15 +149,16 @@
 
         // Bind event
         (function () {
-            const uri = document.getElementById('fake').value;
-                        
+            var urlField = document.getElementById('fake');
+            var uri = urlField.value;
+    
             console.log('URI:' + uri);
             
             document.getElementById('get').onclick = function (e) {
                 e.preventDefault();
                 doCORSRequest({
                     method: 'GET',
-                    url: "https://www.e-farsas.com/?s=" + uri,
+                    url: "https://www.e-farsas.com/?s=" + urlField.value,
                 }, handleSuccess);
             };
         })();
