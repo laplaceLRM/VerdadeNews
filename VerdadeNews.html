@@ -113,7 +113,7 @@
             const falseHit = (textoHTML.match(/Falso/g) || []).length;
             const verdadeHit = (textoHTML.match(/Verdade/g) || []).length;
             var diferenca = Math.abs(falseHit - verdadeHit);
-            if diferenca > 5 {
+            if (diferenca > 5 ) {
                 if (falseHit > verdadeHit) {
                     window.location.href = "falso.html";
                 } else {
