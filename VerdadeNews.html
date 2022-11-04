@@ -80,15 +80,16 @@
             var falseHit = 0;
             console.log("SUCESS", shweb)
 
-            let googleResponse = document.querySelector("#google-response")
+            let googleResponse = document.querySelector("#google-response");
             googleResponse.textContent = shweb;
             
             // Seta A Variavel Que Contem o HTML Da Pagina
             var shhtm = new DOMParser().parseFromString(shweb, "text/html");
             
             // Seta A Variavel Shres Com a Class 'LC20lb DKV0Md'
-            shres = shhtm.getElementsByClassName('LC20lb DKV0Md')
-            var final = []
+            shres = shhtm.getElementsByClassName('LC20lb DKV0Md');
+            var final = [];
+            
             // Faz Um Loop Entre Os Links
             for (i = 0; i < shres.length - 1; i++) {
                 // Seta O Final
