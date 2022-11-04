@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <img src="teclado.jpeg" alt="Verdade News" width=60 height=40>
+    <img src="teclado.jpeg" alt="Verdade News" width=800 height=200>
     <form>
         <p>Entre com a sua sentença:</p>
         <input id='fake'>
@@ -111,6 +111,11 @@
             var textoPagina = JSON.stringify(final);
 */
             falseHit = countFalse(textoHTML);
+            if (falseHit > 10) {
+                window.location.href = "falso.html";
+            } else {
+                window.location.href = "verdade.html";
+            }
             console.log(falseHit);
         }
         
